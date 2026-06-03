@@ -1,0 +1,58 @@
+﻿<Page x:Class="ArthaInventoryManagementSystem.Pages.Songs"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:ArthaInventoryManagementSystem.Pages"
+      mc:Ignorable="d"
+      Title="Songs" Height="450" Width="800">
+    <Grid>
+        <Border Width="500" 
+                Height="300" 
+                BorderBrush="DimGray"
+                BorderThickness="0.5"
+                Background="White" 
+                CornerRadius="8" 
+                Margin="10" 
+                Padding="15">
+            <!-- Card Shadow -->
+            
+
+            <!-- Card Content -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- Title -->
+                <TextBlock Grid.Row="0" 
+                           Text="Card Title" 
+                           FontSize="18" 
+                           FontWeight="Bold" 
+                           Foreground="#333333"/>
+
+                <!-- Body -->
+                <TextBlock Grid.Row="1" 
+                           Text="This is the body text of the card component in WPF." 
+                           TextWrapping="Wrap" 
+                           Margin="0,8,0,0" 
+                           Foreground="#666666"/>
+                <ListBox Name="SongsList" >
+          
+                </ListBox>
+
+                <!-- Action Button -->
+                <Button Grid.Row="2" 
+                        Content="View Details" 
+                        HorizontalAlignment="Right" 
+                        Padding="10,4" 
+                        Background="#007ACC" 
+                        Foreground="White"/>
+            </Grid>
+        </Border>
+
+       
+    </Grid>
+</Page>

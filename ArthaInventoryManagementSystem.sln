@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArthaInventoryManagementSystem", "ArthaInventoryManagementSystem\ArthaInventoryManagementSystem.csproj", "{0F42C713-1ED6-4B77-88B8-2D6D1AB8E548}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Artha.Test", "Artha.Test\Artha.Test.csproj", "{CE1EB6BF-0BDD-4239-83D8-EB5E0F20A1CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{0F42C713-1ED6-4B77-88B8-2D6D1AB8E548}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F42C713-1ED6-4B77-88B8-2D6D1AB8E548}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F42C713-1ED6-4B77-88B8-2D6D1AB8E548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE1EB6BF-0BDD-4239-83D8-EB5E0F20A1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE1EB6BF-0BDD-4239-83D8-EB5E0F20A1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE1EB6BF-0BDD-4239-83D8-EB5E0F20A1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE1EB6BF-0BDD-4239-83D8-EB5E0F20A1CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

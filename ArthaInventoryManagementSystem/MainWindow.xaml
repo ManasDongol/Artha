@@ -4,25 +4,38 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ArthaInventoryManagementSystem"
+        xmlns:controls="clr-namespace:ArthaInventoryManagementSystem.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Artha Inventory"
+        Height="700"
+        Width="1200">
+
     <Grid>
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Header -->
-        <TextBlock Text="Artha Inventory System"
-                   FontSize="24"
-                   FontWeight="Bold"
-                   Margin="10"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-        <!-- Content -->
-        <StackPanel Grid.Row="1" Margin="10">
-            <Button Content="Manage Inventory" Height="40" Margin="0,5"/>
-            <Button Content="Manage Customers" Height="40" Margin="0,5"/>
-            <Button Content="View Reports" Height="40" Margin="0,5"/>
-        </StackPanel>
+        <!-- Top Bar -->
+        <controls:Topbar Grid.Row="0"
+                         Grid.ColumnSpan="2"/>
+
+        <!-- Left Navigation -->
+        <controls:Navbar Grid.Row="1"
+                         Grid.Column="0"/>
+
+        <!-- Dynamic Page Content -->
+        <Frame x:Name="MainFrame"
+               Grid.Row="1"
+               Grid.Column="1"
+               NavigationUIVisibility="Hidden"/>
+
     </Grid>
+
 </Window>
