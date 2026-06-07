@@ -4,16 +4,22 @@ namespace ArthaInventoryManagementSystem.Services;
 
 public class NavigationService
 {
-    private readonly Frame _frame;
+    // We will set this frame once the MainWindow initializes
+    private Frame? _frame;
 
-    public NavigationService(Frame frame)
+    public void Initialize(Frame frame)
     {
         _frame = frame;
     }
 
     public void NavigateTo<T>() where T : Page
     {
-        var page = (Page)Activator.CreateInstance(typeof(T));
+        if (_frame == null)
+        {
+            throw new InvalidOperationException("NavigationService has not been initialized with a Frame.");
+        }
+
+        var page = (Page)Activator.CreateInstance(typeof(T))!;
         _frame.Navigate(page);
     }
 }

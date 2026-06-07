@@ -1,27 +1,27 @@
-﻿using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 using ArthaInventoryManagementSystem.Pages;
+using ArthaInventoryManagementSystem.ViewModels; // Make sure to include this
 
 namespace ArthaInventoryManagementSystem;
 
-/// <summary>
-/// Interaction logic for MainWindow.xaml
-/// </summary>
 public partial class MainWindow : Window
 {
-    public MainWindow()
+    private readonly NavigationViewModel _viewModel;
+
+    // 1. DI passes the ViewModel straight into the window
+    public MainWindow(NavigationViewModel viewModel,Services.NavigationService navigationService)
     {
         InitializeComponent();
+        
+        navigationService.Initialize(this.MainFrame);
+        // 2. Assign the DataContext so bindings in XAML work globally across the window
+        _viewModel = viewModel;
+        this.DataContext = _viewModel;
+
+        // 3. Set your default starting page
         MainFrame.Navigate(new Dashboard());
     }
+
     private void OpenProducts(object sender, RoutedEventArgs e)
     {
         MainFrame.Navigate(new Products());
@@ -29,6 +29,6 @@ public partial class MainWindow : Window
 
     private void OpenSongs(object sender, RoutedEventArgs e)
     {
-        MainFrame.Navigate(new  Songs());
+        MainFrame.Navigate(new Songs());
     }
 }

@@ -28,7 +28,7 @@
 
                 <!-- Title -->
                 <TextBlock Grid.Row="0" 
-                           Text="Card Title" 
+                           Text="TSDFSDFSDF" 
                            FontSize="18" 
                            FontWeight="Bold" 
                            Foreground="#333333"/>

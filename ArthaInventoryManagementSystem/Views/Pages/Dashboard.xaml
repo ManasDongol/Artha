@@ -7,6 +7,9 @@
       mc:Ignorable="d"
       Title="Dashboard" Height="450" Width="800">
     <Grid>
+        <TextBox>
+            Dashboard
+        </TextBox>
         <Border Width="500" 
                 Height="300" 
                 BorderBrush="DimGray"

@@ -26,20 +26,22 @@
                         Background="Transparent"
                         BorderThickness="0"
                         BorderBrush="Transparent"
-                        />
+                        Click="OpenDashboard"/>
 
                 <Button Content="Products"
                         Height="42"
                         Margin="0,5"
                         Background="Transparent"
                         BorderThickness="0"
-                        BorderBrush="Transparent"/>
+                        BorderBrush="Transparent"
+                        Click="OpenProducts"/>
 
                 <Button Content="Billing"
                         Height="42"
                         Background="Transparent"
                         BorderThickness="0"
-                        BorderBrush="Transparent"/>
+                        BorderBrush="Transparent"
+                        Click="OpenBilling"/>
 
                 <Button Content="Songs"
                         Height="42"
