@@ -56,9 +56,11 @@
             <Button Grid.Row="2"
                     Content="Logout"
                     Height="42"
+                    
                     Margin="10,0,10,20"
-                    BorderBrush="#D9D9D9"
-                    Background="Transparent"/>
+                    Background="#fc0345"
+                    BorderBrush="Transparent"
+                    Click="Logout"/>
 
         </Grid>
 

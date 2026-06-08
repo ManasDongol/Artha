@@ -11,7 +11,7 @@ public class NavigationViewModel(NavigationService navigationService,ILogger<Nav
   
     public void openSongs()
     {
-     
+     Console.WriteLine("Navigating to Songs");
         navigationService.NavigateTo<Songs>();
         //service.Navigate("Songs");
     }

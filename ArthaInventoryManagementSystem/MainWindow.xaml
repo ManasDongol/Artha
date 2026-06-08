@@ -7,8 +7,8 @@
         xmlns:controls="clr-namespace:ArthaInventoryManagementSystem.Controls"
         mc:Ignorable="d"
         Title="Artha Inventory"
-        Height="700"
-        Width="1200">
+        Height="600"
+        Width="900">
 
     <Grid>
 

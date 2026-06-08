@@ -9,8 +9,8 @@ namespace ArthaInventoryManagementSystem;
 
 public partial class App : Application
 {
-    private IServiceProvider serviceProvider;
-
+    public static IServiceProvider serviceProvider;
+   
     protected override void OnStartup(StartupEventArgs e)
     {
         var services = new ServiceCollection();
@@ -21,7 +21,7 @@ public partial class App : Application
 
         serviceProvider = services.BuildServiceProvider();
 
-        var mainWindow = serviceProvider.GetRequiredService<MainWindow>();
+        var mainWindow = serviceProvider.GetRequiredService<LoginWindow>();
 
         mainWindow.Show();
 
@@ -36,8 +36,9 @@ public partial class App : Application
             builder.AddConsole();
         });
 
+     
         services.AddSingleton<MainWindow>();
-    
+        services.AddSingleton<LoginWindow>();
         // Explicitly use your custom service type
         services.AddSingleton<ArthaInventoryManagementSystem.Services.NavigationService>();
         services.AddTransient<NavigationViewModel>();

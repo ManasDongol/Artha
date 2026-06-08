@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="ArthaInventoryManagementSystem.Views.Forms.LoginForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="350" d:DesignWidth="400">
+
+    <Grid Background="#F3F4F6">
+
+        <!-- Center container -->
+        <Border Width="320"
+                Padding="25"
+                Background="White"
+                CornerRadius="10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+
+            <StackPanel>
+
+                <!-- Title -->
+                <TextBlock Text="Login"
+                           FontSize="22"
+                           FontWeight="SemiBold"
+                           Margin="0,0,0,20"
+                           HorizontalAlignment="Center"/>
+
+                <!-- Username -->
+                <TextBlock Text="Username"
+                           Margin="0,0,0,5"/>
+                <TextBox Height="32"
+                         Padding="6"
+                         BorderBrush="#D1D5DB"/>
+
+                <!-- Password -->
+                <TextBlock Text="Password"
+                           Margin="0,15,0,5"/>
+                <PasswordBox Height="32"
+                             Padding="6"
+                             BorderBrush="#D1D5DB"
+                             Name="UserPass"/>
+
+                <!-- Button -->
+                <Button Content="Login"
+                        Height="35"
+                        Margin="0,20,0,0"
+                        Background="#000"
+                        Foreground="White"
+                        FontWeight="SemiBold"
+                        Cursor="Hand"
+                        Click="submit_login"/>
+
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</UserControl>
